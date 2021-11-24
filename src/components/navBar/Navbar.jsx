@@ -8,14 +8,15 @@ const Navbar = () => {
     return (
         <div className='nav-container'>
             <div className="logo-container">
-                <Avatar src={icon} size='small'/>
+                <Avatar className='Icon__logo' src={icon} size='small'/>
                 <Typography.Title level={2} className="logo">
                     <Link to="/">Crypto News</Link>
                 </Typography.Title>
                 {/* <Button className="menu-control-container">
 
-                </Button> */}
-                <Menu theme="dark">
+                </Button> */}                
+            </div>    
+            <Menu theme="dark">
                     <Menu.Item icon={<HomeOutlined/>}>
                         <Link to='/'>
                             Home
@@ -36,8 +37,9 @@ const Navbar = () => {
                             News
                         </Link>
                     </Menu.Item>
-                </Menu>
-            </div>            
+            </Menu>        
+            {/* <Switch>       
+            </Switch> */}
         </div>
     )
 }
