@@ -11,8 +11,8 @@ const Cryptocurrencies = ({simplified}) => {
     const [searchTerm, setSearchTerm] = useState('')
     const [cryptos, setCryptos] = useState([])
     
-    console.log(!!cryptos)
-    console.log(cryptosList?.data?.coins)
+    // console.log(!!cryptos)
+    // console.log(cryptosList?.data?.coins)
 
     useEffect(() => {
         const filteredData = cryptosList?.data?.coins.filter((coin)=> coin.name.toLowerCase().includes(searchTerm.toLocaleLowerCase()))
@@ -37,7 +37,7 @@ const Cryptocurrencies = ({simplified}) => {
                     <Link to={`/crypto/${currency.id}`}>
                         <Card 
                         title={`${currency.rank}. ${currency.name}`} 
-                        extra={<img className="crypto-image" src={currency.iconUrl}/>}
+                        extra={<img className="crypto-image" alt='Logo coin' src={currency.iconUrl}/>}
                         hoverable>
                             <p>Price: {millify(currency.price)}  $</p>
                             <p>Market Cap: {millify(currency.marketCap)}</p>
